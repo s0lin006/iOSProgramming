@@ -11,6 +11,7 @@ import UIKit
 class ConversionViewController: UIViewController, UITextFieldDelegate
 {
     @IBOutlet var celsiusLabel: UILabel!
+    @IBOutlet var kelvinLabel: UILabel!
     @IBOutlet var textField: UITextField!
     
     let numberFormatter: NumberFormatter =
@@ -26,7 +27,8 @@ class ConversionViewController: UIViewController, UITextFieldDelegate
     {
         didSet
         {
-                updateCelsiusLabel()
+            updateCelsiusLabel()
+            updateKelvinValue()
         }
     }
     
@@ -35,6 +37,18 @@ class ConversionViewController: UIViewController, UITextFieldDelegate
         if let value = fahrenheitValue
         {
             return (value - 32) * (5/9)
+        }
+        else
+        {
+            return nil
+        }
+    }
+    
+    var kelvinValue: Double?
+    {
+        if let value = fahrenheitValue
+        {
+            return (value - 32) * (5/9) + 273.15
         }
         else
         {
@@ -51,6 +65,18 @@ class ConversionViewController: UIViewController, UITextFieldDelegate
         else
         {
             celsiusLabel.text = "---"
+        }
+    }
+    
+    func updateKelvinValue()
+    {
+        if let value = kelvinValue
+        {
+            kelvinLabel.text = numberFormatter.string(from: NSNumber(value: value))
+        }
+        else
+        {
+            kelvinLabel.text = "---"
         }
     }
     
