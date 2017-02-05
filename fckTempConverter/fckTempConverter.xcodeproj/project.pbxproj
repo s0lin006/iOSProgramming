@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		74A2EEB51E0C723F00B7322B /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74A2EEB51E0C723F00B7322B /* fckTempConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fckTempConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74A2EEB81E0C723F00B7322B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74A2EEBD1E0C724000B7322B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74A2EEBF1E0C724000B7322B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,7 +38,7 @@
 		74A2EEAC1E0C723900B7322B = {
 			isa = PBXGroup;
 			children = (
-				74A2EEB71E0C723F00B7322B /* WorldTrotter */,
+				74A2EEB71E0C723F00B7322B /* fckTempConverter */,
 				74A2EEB61E0C723F00B7322B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,12 +46,12 @@
 		74A2EEB61E0C723F00B7322B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				74A2EEB51E0C723F00B7322B /* WorldTrotter.app */,
+				74A2EEB51E0C723F00B7322B /* fckTempConverter.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		74A2EEB71E0C723F00B7322B /* WorldTrotter */ = {
+		74A2EEB71E0C723F00B7322B /* fckTempConverter */ = {
 			isa = PBXGroup;
 			children = (
 				C3911A811E35405D00602C45 /* ConversionViewController.swift */,
@@ -61,15 +61,15 @@
 				74A2EEC11E0C724000B7322B /* LaunchScreen.storyboard */,
 				74A2EEC41E0C724000B7322B /* Info.plist */,
 			);
-			path = WorldTrotter;
+			path = fckTempConverter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		74A2EEB41E0C723A00B7322B /* WorldTrotter */ = {
+		74A2EEB41E0C723A00B7322B /* fckTempConverter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74A2EEC71E0C724000B7322B /* Build configuration list for PBXNativeTarget "WorldTrotter" */;
+			buildConfigurationList = 74A2EEC71E0C724000B7322B /* Build configuration list for PBXNativeTarget "fckTempConverter" */;
 			buildPhases = (
 				74A2EEB11E0C723A00B7322B /* Sources */,
 				74A2EEB21E0C723A00B7322B /* Frameworks */,
@@ -79,9 +79,9 @@
 			);
 			dependencies = (
 			);
-			name = WorldTrotter;
+			name = fckTempConverter;
 			productName = WorldTrotter;
-			productReference = 74A2EEB51E0C723F00B7322B /* WorldTrotter.app */;
+			productReference = 74A2EEB51E0C723F00B7322B /* fckTempConverter.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -100,7 +100,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 74A2EEB01E0C723900B7322B /* Build configuration list for PBXProject "WorldTrotter" */;
+			buildConfigurationList = 74A2EEB01E0C723900B7322B /* Build configuration list for PBXProject "fckTempConverter" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -113,7 +113,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				74A2EEB41E0C723A00B7322B /* WorldTrotter */,
+				74A2EEB41E0C723A00B7322B /* fckTempConverter */,
 			);
 		};
 /* End PBXProject section */
@@ -258,7 +258,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = WorldTrotter/Info.plist;
+				INFOPLIST_FILE = fckTempConverter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.WorldTrotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -270,7 +270,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = WorldTrotter/Info.plist;
+				INFOPLIST_FILE = fckTempConverter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.WorldTrotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -281,7 +281,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		74A2EEB01E0C723900B7322B /* Build configuration list for PBXProject "WorldTrotter" */ = {
+		74A2EEB01E0C723900B7322B /* Build configuration list for PBXProject "fckTempConverter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74A2EEC51E0C724000B7322B /* Debug */,
@@ -290,7 +290,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74A2EEC71E0C724000B7322B /* Build configuration list for PBXNativeTarget "WorldTrotter" */ = {
+		74A2EEC71E0C724000B7322B /* Build configuration list for PBXNativeTarget "fckTempConverter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74A2EEC81E0C724000B7322B /* Debug */,

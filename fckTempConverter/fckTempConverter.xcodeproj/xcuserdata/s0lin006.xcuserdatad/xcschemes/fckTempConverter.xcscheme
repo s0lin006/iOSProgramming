@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "74A2EEB41E0C723A00B7322B"
-               BuildableName = "WorldTrotter.app"
-               BlueprintName = "WorldTrotter"
-               ReferencedContainer = "container:WorldTrotter.xcodeproj">
+               BuildableName = "fckTempConverter.app"
+               BlueprintName = "fckTempConverter"
+               ReferencedContainer = "container:fckTempConverter.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "74A2EEB41E0C723A00B7322B"
-            BuildableName = "WorldTrotter.app"
-            BlueprintName = "WorldTrotter"
-            ReferencedContainer = "container:WorldTrotter.xcodeproj">
+            BuildableName = "fckTempConverter.app"
+            BlueprintName = "fckTempConverter"
+            ReferencedContainer = "container:fckTempConverter.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "74A2EEB41E0C723A00B7322B"
-            BuildableName = "WorldTrotter.app"
-            BlueprintName = "WorldTrotter"
-            ReferencedContainer = "container:WorldTrotter.xcodeproj">
+            BuildableName = "fckTempConverter.app"
+            BlueprintName = "fckTempConverter"
+            ReferencedContainer = "container:fckTempConverter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "74A2EEB41E0C723A00B7322B"
-            BuildableName = "WorldTrotter.app"
-            BlueprintName = "WorldTrotter"
-            ReferencedContainer = "container:WorldTrotter.xcodeproj">
+            BuildableName = "fckTempConverter.app"
+            BlueprintName = "fckTempConverter"
+            ReferencedContainer = "container:fckTempConverter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

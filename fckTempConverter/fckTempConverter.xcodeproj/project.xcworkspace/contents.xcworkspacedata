@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:WorldTrotter.xcodeproj">
+      location = "self:/Users/s0lin006/iOSProgramming/WorldTrotter/fckTempConverter.xcodeproj">
    </FileRef>
 </Workspace>
