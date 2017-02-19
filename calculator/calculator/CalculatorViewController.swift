@@ -8,13 +8,12 @@
 
 /********************************************************
 TODO:
-    - more operations (sub, mul, div)
-    - multi-digit
     - clear and delete
     - multiple operations before equal sign pressed
     - mem
     - multi-line?
-    - decimal capability
+    - decimal capability (needs more testing)
+    - negative only works for first digit (needs more testing)
 ********************************************************/
 
 import UIKit
@@ -40,140 +39,138 @@ class CalculatorViewController: UIViewController
     @IBOutlet var buttonSubtract:   UIButton!
     @IBOutlet var buttonPlus:       UIButton!
     @IBOutlet var buttonEqual:      UIButton!
+
+    let numberFormatter: NumberFormatter =
+    {
+        let nf = NumberFormatter()
+        nf.numberStyle = .decimal
+        nf.minimumFractionDigits = 0
+        nf.maximumFractionDigits = 4
+        return nf
+    }()
     
-    var input1: Double = 0.0
-    var input2: Double = 0.0
-    var solution: Double = 0.0
-    var count = 0
-    
-    // temp solution for operations
-    // Flag: 1=add, 2=sub, 3=mul, 4=div, 5=neg, 6=dec, 7=clear, 8=equal
-    var operationFlag = 0;
-    
+    var inputStr1: String = ""
+    var inputStr2: String = ""
+    var outputStr: String = "0"
+
+    var readyToCalc: Bool = false
+    var secondInput: Bool = false
+
+    // Flag: 0=nothing, 1=add, 2=sub, 3=mul, 4=div, 5=neg, 6=dec, 7=eq, 8=clr
+    var operationFlag: integer_t = 0
+
     // process input
     @IBAction func buttonPress(sender: UIButton)
     {
+        // if button is number, process digit
+        if(sender == button0 || sender == button1 || sender == button2 ||
+            sender == button3 || sender == button4 || sender == button5 ||
+            sender == button6 || sender == button7 || sender == button8 ||
+            sender == button9)
+        {
+            processDigit(sender: sender)
+        }
+        else // else, process symbols
+        {
+            if(sender == buttonClear)
+            {
+                inputStr1 = ""
+                inputStr2 = ""
+                outputStr = "0"
+                operationFlag = 0
+                showOutput(output: outputStr)
+            }
+            else if(sender == buttonEqual && readyToCalc == true)
+            {
+                outputStr = String(calculate(input1: inputStr1, input2: inputStr2, flag: operationFlag))
+                showOutput(output: outputStr)
+            }
+            else if(sender == buttonNegative)
+            {
+                inputStr1 = "-" + inputStr1
+            }
+            else if(sender == buttonDecimal)
+            {
+                inputStr1 = inputStr1 + "."
+            }
+            else
+            {
+                processOperation(sender: sender)
+            }
+        }
+    }
+
+    func processDigit(sender: UIButton)
+    {
+        inputStr1 = inputStr1 + String(sender.currentTitle!)
+        printNumber(number: inputStr1)
+
+        if(secondInput == true)
+        {
+            readyToCalc = true
+        }
+    }
+
+    // Flag: 0=nothing, 1=add, 2=sub, 3=mul, 4=div, 5=neg, 6=dec, 7=eq, 8=clr
+    func processOperation(sender: UIButton)
+    {
+        inputStr2 = inputStr1
+        inputStr1 = ""
+
         if(sender == buttonPlus)
         {
-            if(count != 0)
-            {
-                operationFlag = 1
-                count = count + 1
-                input2 = input1
-                input1 = 0
-                print("plus")
-            }
+            operationFlag = 1
         }
         else if(sender == buttonSubtract)
         {
             operationFlag = 2
-            count = count + 1
-            input2 = input1
-            input1 = 0
-            print("sub")
         }
         else if(sender == buttonMultiply)
         {
             operationFlag = 3
-            count = count + 1
-            input2 = input1
-            input1 = 0
-            print("mul")
         }
         else if(sender == buttonDivide)
         {
             operationFlag = 4
-            count = count + 1
-            input2 = input1
-            input1 = 0
-            print("div")
         }
-        else if(sender == buttonNegative)
-        {
-            operationFlag = 5
-            //input1 = input1 * -1
-        }
-        else if(sender == buttonDecimal)
-        {
-            operationFlag = 6
-            count = count + 1
-        }
-        else if(sender == buttonClear)
-        {
-            operationFlag = 7
-            input1 = 0
-            input2 = 0
-            count = 2
-            print("clr")
-        }
-        else if(sender == buttonEqual) // if symbols
-        {
-            //operationFlag = 8
-            count = 2
-            print("equal")
-        }
-        else // else, digits
-        {
-            print(sender.currentTitle!)
-            input1 = Double(sender.currentTitle!)!
-            printDigit(number: String(sender.currentTitle!))
-        }
-        
-        
-        if(count == 2)
-        {
-            solution = calculate(input1: input1, input2: input2)
-            showOutput(output: solution)
-            count = 0
-            print(solution)
-            input1 = 0
-            input2 = 0
-            solution = 0
-        }
-        
-        
-        //print("input1: " + String(input1))
-        //print("input2: " + String(input2))
-        //print("solution: " + String(solution))
-        //print("Operation flag: " + String(operationFlag))
+
+        secondInput = true
     }
-    
-    func calculate(input1: Double, input2: Double) -> Double
+
+    func calculate(input1: String, input2: String, flag: integer_t) -> Double
     {
-        if(operationFlag == 1)
+        if(flag == 1)
         {
-            return input1 + input2
+            return Double(input2)! + Double(input1)!
         }
-        else if(operationFlag == 2)
+        else if(flag == 2)
         {
-            return input2 - input1
+            return Double(input2)! - Double(input1)!
         }
-        else if(operationFlag == 3)
+        else if(flag == 3)
         {
-            return input1 * input2
+            return Double(input2)! * Double(input1)!
         }
-        else if(operationFlag == 4)
+        else if(flag == 4)
         {
-            return input2 / input1
-        }
-        else if(operationFlag == 7)
-        {
-            return 0
+            return Double(input2)! / Double(input1)!
         }
         else
         {
-            return 999999999
+            return 9999 // temp. 
         }
     }
     
-    func printDigit(number: String)
+    //func calculate(input1: Double, input2: Double) -> Double
+
+    func printNumber(number: String)
     {
         outputLabel.text = String(number)
     }
     
-    @IBAction func showOutput(output: Double)
+    func showOutput(output: String)
     {
-        outputLabel.text = String(output)
+        outputLabel.text = output
     }
     
 }
