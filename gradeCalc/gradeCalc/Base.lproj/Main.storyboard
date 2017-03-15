@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="gradeCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CECS 696" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="j4t-Qk-Iz7" userLabel="className">
+                                <rect key="frame" x="0.0" y="25" width="213.5" height="113.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontSizeToFitWidth" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1ko-yg-Hza" userLabel="finalGrade">
+                                <rect key="frame" x="213.5" y="25" width="106.5" height="113.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Test 1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R3e-JA-gnw" userLabel="gradeName1">
+                                <rect key="frame" x="0.0" y="143.5" width="160" height="57"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oa3-HS-rp2" userLabel="gradeWorth1">
+                                <rect key="frame" x="160" y="143.5" width="80" height="57"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zqd-6c-wV1" userLabel="actualGrade1">
+                                <rect key="frame" x="240" y="143.5" width="80" height="57"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="dismissKeyboardWithSender:" destination="dkx-z0-nzr" eventType="editingDidEnd" id="CbB-Zz-ZTp"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Test 2" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Clx-x5-mQQ" userLabel="gradeName2">
+                                <rect key="frame" x="0.0" y="205.5" width="160" height="56.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8gN-Tw-B0X" userLabel="gradeWorth2">
+                                <rect key="frame" x="160" y="205.5" width="80" height="56.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Ix-a8-hqB" userLabel="actualGrade2">
+                                <rect key="frame" x="240" y="205.5" width="80" height="56.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Projects" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UT7-7f-TcG" userLabel="gradeName3">
+                                <rect key="frame" x="0.0" y="267" width="160" height="57"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EGV-hW-BDd" userLabel="gradeWorth3">
+                                <rect key="frame" x="160" y="267" width="80" height="57"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="grN-Fi-cVL" userLabel="actualGrade3">
+                                <rect key="frame" x="240" y="267" width="80" height="57"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Homework" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i1L-hf-0SU" userLabel="gradeName4">
+                                <rect key="frame" x="0.0" y="329" width="160" height="56.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Nw-EE-bPs" userLabel="gradeWorth4">
+                                <rect key="frame" x="160" y="329" width="80" height="56.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="09L-hI-ej4" userLabel="actualGrade4">
+                                <rect key="frame" x="240" y="329" width="80" height="56.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Final" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d6u-ug-STY" userLabel="gradeName5">
+                                <rect key="frame" x="0.0" y="390.5" width="160" height="57"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="30" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RYQ-Kh-EQb" userLabel="gradeWorth5">
+                                <rect key="frame" x="160" y="390.5" width="80" height="57"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iLI-cC-fWg" userLabel="actualGrade5">
+                                <rect key="frame" x="240" y="390.5" width="80" height="57"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPM-Lk-4f7" userLabel="calculate">
+                                <rect key="frame" x="80" y="486" width="160" height="57"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dBg-ep-fKY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iLI-cC-fWg" firstAttribute="leading" secondItem="RYQ-Kh-EQb" secondAttribute="trailing" id="0hs-j0-Uh8"/>
+                            <constraint firstItem="i1L-hf-0SU" firstAttribute="width" secondItem="R3e-JA-gnw" secondAttribute="width" id="1P2-bW-Hed"/>
+                            <constraint firstItem="1ko-yg-Hza" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1/3" id="1aE-nX-sU4"/>
+                            <constraint firstItem="rPM-Lk-4f7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="4hQ-tR-knG"/>
+                            <constraint firstItem="Oa3-HS-rp2" firstAttribute="leading" secondItem="R3e-JA-gnw" secondAttribute="trailing" id="4hY-EX-5Gu"/>
+                            <constraint firstItem="EGV-hW-BDd" firstAttribute="height" secondItem="Oa3-HS-rp2" secondAttribute="height" id="4jF-ot-aPA"/>
+                            <constraint firstItem="1ko-yg-Hza" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="6aK-Xo-wjh"/>
+                            <constraint firstItem="3Nw-EE-bPs" firstAttribute="top" secondItem="EGV-hW-BDd" secondAttribute="bottom" constant="5" id="6xW-f1-bOa"/>
+                            <constraint firstItem="Zqd-6c-wV1" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="AnW-zv-nIC"/>
+                            <constraint firstItem="j4t-Qk-Iz7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="BOO-ja-EXu"/>
+                            <constraint firstItem="5Ix-a8-hqB" firstAttribute="height" secondItem="Zqd-6c-wV1" secondAttribute="height" id="DFV-6f-O8K"/>
+                            <constraint firstItem="R3e-JA-gnw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="Dkg-Av-hx1"/>
+                            <constraint firstItem="3Nw-EE-bPs" firstAttribute="width" secondItem="Oa3-HS-rp2" secondAttribute="width" id="DxU-8s-NIM"/>
+                            <constraint firstItem="d6u-ug-STY" firstAttribute="height" secondItem="R3e-JA-gnw" secondAttribute="height" id="EKj-cP-tIR"/>
+                            <constraint firstItem="RYQ-Kh-EQb" firstAttribute="top" secondItem="3Nw-EE-bPs" secondAttribute="bottom" constant="5" id="EcP-GO-hMd"/>
+                            <constraint firstItem="iLI-cC-fWg" firstAttribute="width" secondItem="Zqd-6c-wV1" secondAttribute="width" id="FIC-ff-oi7"/>
+                            <constraint firstItem="d6u-ug-STY" firstAttribute="top" secondItem="i1L-hf-0SU" secondAttribute="bottom" constant="5" id="Fqo-BW-0DW"/>
+                            <constraint firstItem="grN-Fi-cVL" firstAttribute="leading" secondItem="EGV-hW-BDd" secondAttribute="trailing" id="G6W-kJ-uTy"/>
+                            <constraint firstItem="UT7-7f-TcG" firstAttribute="width" secondItem="R3e-JA-gnw" secondAttribute="width" id="GXF-TB-1ER"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rPM-Lk-4f7" secondAttribute="bottom" constant="25" id="I8F-aK-C0x"/>
+                            <constraint firstItem="grN-Fi-cVL" firstAttribute="height" secondItem="Zqd-6c-wV1" secondAttribute="height" id="JaY-B4-lgc"/>
+                            <constraint firstItem="UT7-7f-TcG" firstAttribute="height" secondItem="R3e-JA-gnw" secondAttribute="height" id="Jsw-MM-hdk"/>
+                            <constraint firstItem="5Ix-a8-hqB" firstAttribute="width" secondItem="Zqd-6c-wV1" secondAttribute="width" id="LnY-hy-CyP"/>
+                            <constraint firstItem="RYQ-Kh-EQb" firstAttribute="leading" secondItem="d6u-ug-STY" secondAttribute="trailing" id="LzN-hu-DgO"/>
+                            <constraint firstItem="UT7-7f-TcG" firstAttribute="top" secondItem="Clx-x5-mQQ" secondAttribute="bottom" constant="5" id="NNc-CX-9oM"/>
+                            <constraint firstItem="1ko-yg-Hza" firstAttribute="leading" secondItem="j4t-Qk-Iz7" secondAttribute="trailing" id="O7m-95-cof"/>
+                            <constraint firstItem="09L-hI-ej4" firstAttribute="width" secondItem="Zqd-6c-wV1" secondAttribute="width" id="OMS-YZ-2F8"/>
+                            <constraint firstItem="Oa3-HS-rp2" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="PUo-E0-ffW"/>
+                            <constraint firstItem="grN-Fi-cVL" firstAttribute="width" secondItem="Zqd-6c-wV1" secondAttribute="width" id="Pce-Dt-NUc"/>
+                            <constraint firstItem="09L-hI-ej4" firstAttribute="leading" secondItem="3Nw-EE-bPs" secondAttribute="trailing" id="Rls-2u-TAG"/>
+                            <constraint firstItem="j4t-Qk-Iz7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SDR-b0-ePx"/>
+                            <constraint firstItem="i1L-hf-0SU" firstAttribute="top" secondItem="UT7-7f-TcG" secondAttribute="bottom" constant="5" id="Tlo-v2-Ngd"/>
+                            <constraint firstItem="RYQ-Kh-EQb" firstAttribute="height" secondItem="Oa3-HS-rp2" secondAttribute="height" id="UAI-Ou-HMg"/>
+                            <constraint firstItem="R3e-JA-gnw" firstAttribute="top" secondItem="j4t-Qk-Iz7" secondAttribute="bottom" constant="5" id="UJZ-9b-V7a"/>
+                            <constraint firstItem="Clx-x5-mQQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Udb-2e-3SL"/>
+                            <constraint firstItem="iLI-cC-fWg" firstAttribute="height" secondItem="Zqd-6c-wV1" secondAttribute="height" id="Ur9-xv-TnZ"/>
+                            <constraint firstItem="09L-hI-ej4" firstAttribute="top" secondItem="grN-Fi-cVL" secondAttribute="bottom" constant="5" id="WUv-92-bZI"/>
+                            <constraint firstItem="5Ix-a8-hqB" firstAttribute="leading" secondItem="8gN-Tw-B0X" secondAttribute="trailing" id="WaP-Ii-NRP"/>
+                            <constraint firstItem="Clx-x5-mQQ" firstAttribute="width" secondItem="R3e-JA-gnw" secondAttribute="width" id="XbR-Df-oaV"/>
+                            <constraint firstItem="j4t-Qk-Iz7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="acK-B6-DhE"/>
+                            <constraint firstItem="Zqd-6c-wV1" firstAttribute="leading" secondItem="Oa3-HS-rp2" secondAttribute="trailing" id="ajD-Fd-DUg"/>
+                            <constraint firstItem="Oa3-HS-rp2" firstAttribute="top" secondItem="j4t-Qk-Iz7" secondAttribute="bottom" constant="5" id="bHq-f5-grb"/>
+                            <constraint firstItem="j4t-Qk-Iz7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="2/3" id="d6g-Eb-j2a"/>
+                            <constraint firstItem="1ko-yg-Hza" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="dIR-rP-655"/>
+                            <constraint firstItem="Oa3-HS-rp2" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.25" id="dTM-Hn-qa0"/>
+                            <constraint firstItem="i1L-hf-0SU" firstAttribute="height" secondItem="R3e-JA-gnw" secondAttribute="height" id="exO-2g-4Dd"/>
+                            <constraint firstItem="Zqd-6c-wV1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.25" id="gRJ-hJ-aWI"/>
+                            <constraint firstItem="grN-Fi-cVL" firstAttribute="top" secondItem="5Ix-a8-hqB" secondAttribute="bottom" constant="5" id="gwK-ZW-SJT"/>
+                            <constraint firstItem="Clx-x5-mQQ" firstAttribute="height" secondItem="R3e-JA-gnw" secondAttribute="height" id="hOl-mD-oCU"/>
+                            <constraint firstItem="R3e-JA-gnw" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="hsB-dU-u2Z"/>
+                            <constraint firstItem="09L-hI-ej4" firstAttribute="height" secondItem="Zqd-6c-wV1" secondAttribute="height" id="iL9-kb-aVu"/>
+                            <constraint firstItem="Clx-x5-mQQ" firstAttribute="top" secondItem="R3e-JA-gnw" secondAttribute="bottom" constant="5" id="krt-Sr-ITD"/>
+                            <constraint firstItem="8gN-Tw-B0X" firstAttribute="height" secondItem="Oa3-HS-rp2" secondAttribute="height" id="naa-Pm-J1Q"/>
+                            <constraint firstItem="rPM-Lk-4f7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nhY-Id-Qea"/>
+                            <constraint firstItem="8gN-Tw-B0X" firstAttribute="width" secondItem="Oa3-HS-rp2" secondAttribute="width" id="p3H-5D-I8q"/>
+                            <constraint firstItem="3Nw-EE-bPs" firstAttribute="leading" secondItem="i1L-hf-0SU" secondAttribute="trailing" id="pXb-cT-7zY"/>
+                            <constraint firstItem="R3e-JA-gnw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qI7-7F-wWj"/>
+                            <constraint firstItem="8gN-Tw-B0X" firstAttribute="leading" secondItem="Clx-x5-mQQ" secondAttribute="trailing" id="qK5-RF-2He"/>
+                            <constraint firstItem="iLI-cC-fWg" firstAttribute="top" secondItem="09L-hI-ej4" secondAttribute="bottom" constant="5" id="qf2-v3-Ie0"/>
+                            <constraint firstItem="d6u-ug-STY" firstAttribute="width" secondItem="R3e-JA-gnw" secondAttribute="width" id="qrY-8G-hDc"/>
+                            <constraint firstItem="Zqd-6c-wV1" firstAttribute="top" secondItem="1ko-yg-Hza" secondAttribute="bottom" constant="5" id="s5k-zU-N8y"/>
+                            <constraint firstItem="3Nw-EE-bPs" firstAttribute="height" secondItem="Oa3-HS-rp2" secondAttribute="height" id="sBM-yM-tuv"/>
+                            <constraint firstItem="EGV-hW-BDd" firstAttribute="top" secondItem="8gN-Tw-B0X" secondAttribute="bottom" constant="5" id="sRD-QH-dbQ"/>
+                            <constraint firstItem="EGV-hW-BDd" firstAttribute="width" secondItem="Oa3-HS-rp2" secondAttribute="width" id="tdl-3o-XPf"/>
+                            <constraint firstItem="i1L-hf-0SU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uIa-4G-Xbb"/>
+                            <constraint firstItem="RYQ-Kh-EQb" firstAttribute="width" secondItem="Oa3-HS-rp2" secondAttribute="width" id="uda-nf-UuT"/>
+                            <constraint firstItem="UT7-7f-TcG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uhD-Gp-3NW"/>
+                            <constraint firstItem="rPM-Lk-4f7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="unx-gz-Cjg"/>
+                            <constraint firstItem="8gN-Tw-B0X" firstAttribute="top" secondItem="Oa3-HS-rp2" secondAttribute="bottom" constant="5" id="vFP-Pf-Ch8"/>
+                            <constraint firstItem="EGV-hW-BDd" firstAttribute="leading" secondItem="UT7-7f-TcG" secondAttribute="trailing" id="wyc-tR-Hes"/>
+                            <constraint firstItem="5Ix-a8-hqB" firstAttribute="top" secondItem="Zqd-6c-wV1" secondAttribute="bottom" constant="5" id="xvE-7W-DhR"/>
+                            <constraint firstItem="d6u-ug-STY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zne-4F-n84"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actualGrade1" destination="Zqd-6c-wV1" id="NuL-Uu-jyK"/>
+                        <outlet property="actualGrade2" destination="5Ix-a8-hqB" id="I59-wQ-6QZ"/>
+                        <outlet property="actualGrade3" destination="grN-Fi-cVL" id="nVj-Jc-hwB"/>
+                        <outlet property="actualGrade4" destination="09L-hI-ej4" id="kAE-jY-UtP"/>
+                        <outlet property="actualGrade5" destination="iLI-cC-fWg" id="JmL-Hf-aef"/>
+                        <outlet property="calculateButton" destination="rPM-Lk-4f7" id="dgH-vJ-c7l"/>
+                        <outlet property="className" destination="j4t-Qk-Iz7" id="ypT-Re-wzg"/>
+                        <outlet property="finalGradeLabel" destination="1ko-yg-Hza" id="ciY-Vb-3Xp"/>
+                        <outlet property="gradeName1" destination="R3e-JA-gnw" id="QCp-GZ-byF"/>
+                        <outlet property="gradeName2" destination="Clx-x5-mQQ" id="EGi-Tw-uxK"/>
+                        <outlet property="gradeName3" destination="UT7-7f-TcG" id="yQ8-3A-suz"/>
+                        <outlet property="gradeName4" destination="i1L-hf-0SU" id="lMO-nK-gyE"/>
+                        <outlet property="gradeName5" destination="d6u-ug-STY" id="l5y-qy-PFI"/>
+                        <outlet property="gradeWorth1" destination="Oa3-HS-rp2" id="daZ-of-8pP"/>
+                        <outlet property="gradeWorth2" destination="8gN-Tw-B0X" id="KNA-aK-bre"/>
+                        <outlet property="gradeWorth3" destination="EGV-hW-BDd" id="tUb-n1-N8m"/>
+                        <outlet property="gradeWorth4" destination="3Nw-EE-bPs" id="4PB-t0-xJu"/>
+                        <outlet property="gradeWorth5" destination="RYQ-Kh-EQb" id="GDh-5N-4v8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.25" y="122.53521126760563"/>
+        </scene>
+    </scenes>
+</document>
