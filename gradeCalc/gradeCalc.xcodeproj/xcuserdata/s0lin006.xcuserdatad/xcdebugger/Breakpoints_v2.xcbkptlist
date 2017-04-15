@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gradeCalc/ViewController.swift"
+            timestampString = "511556067.150472"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "buttonPress(sender:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gradeCalc.ViewController.temp.getter : Swift.Double"
+                  moduleName = "gradeCalc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s0lin006/iOSProgramming/gradeCalc/gradeCalc/ViewController.swift"
+                  timestampString = "511554684.370296"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gradeCalc.ViewController.temp.setter : Swift.Double"
+                  moduleName = "gradeCalc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s0lin006/iOSProgramming/gradeCalc/gradeCalc/ViewController.swift"
+                  timestampString = "511554684.37389"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gradeCalc.ViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; gradeCalc.ViewController"
+                  moduleName = "gradeCalc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s0lin006/iOSProgramming/gradeCalc/gradeCalc/ViewController.swift"
+                  timestampString = "511554684.375592"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "635">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gradeCalc.ViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;gradeCalc.ViewController&gt;"
+                  moduleName = "gradeCalc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s0lin006/iOSProgramming/gradeCalc/gradeCalc/ViewController.swift"
+                  timestampString = "511554684.378427"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "538">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

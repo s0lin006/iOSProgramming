@@ -38,28 +38,21 @@ class ViewController: UIViewController
     @IBOutlet var gradeWorth4: UITextField!
     @IBOutlet var gradeWorth5: UITextField!
 
-    @IBOutlet var actualGrade1: UITextField!
-    @IBOutlet var actualGrade2: UITextField!
-    @IBOutlet var actualGrade3: UITextField!
-    @IBOutlet var actualGrade4: UITextField!
-    @IBOutlet var actualGrade5: UITextField!
+    @IBOutlet var actualGrade: [UITextField] = []
 
     var temp: Double = 0.0
 
     @IBAction func buttonPress(sender: UIButton)
     {
-        temp = (Double(actualGrade1.text!)! * (Double(gradeWorth1.text!)! / 100)) +
-            (Double(actualGrade2.text!)! * (Double(gradeWorth2.text!)! / 100)) +
-            (Double(actualGrade3.text!)! * (Double(gradeWorth3.text!)! / 100)) +
-            (Double(actualGrade4.text!)! * (Double(gradeWorth4.text!)! / 100)) +
-            (Double(actualGrade5.text!)! * (Double(gradeWorth5.text!)! / 100))
-
+        temp = 0.0
+        
+        for i in actualGrade
+        {
+            temp = temp + ((Double(i.text!)!) * (0.25))
+            print("temp:" + String(temp))
+        }
+        //temp = Double(actualGrade[0].text!)! + Double(actualGrade[1].text!)!
         finalGradeLabel.text = String(temp)
-    }
-
-    @IBAction func dismissKeyboard(sender: AnyObject)
-    {
-        actualGrade1.resignFirstResponder()
     }
 }
 

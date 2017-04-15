@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C32C03EC1EA2848900620A3F /* scorecard.png in Resources */ = {isa = PBXBuildFile; fileRef = C32C03E91EA2848900620A3F /* scorecard.png */; };
+		C32C03ED1EA2848900620A3F /* gameOver.png in Resources */ = {isa = PBXBuildFile; fileRef = C32C03EA1EA2848900620A3F /* gameOver.png */; };
+		C32C03EE1EA2848900620A3F /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = C32C03EB1EA2848900620A3F /* button.png */; };
+		C32C03F11EA289EE00620A3F /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = C32C03EF1EA289EE00620A3F /* share.png */; };
+		C32C03F21EA289EE00620A3F /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = C32C03F01EA289EE00620A3F /* ok.png */; };
 		C3487E731E9AABDE00321FF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3487E721E9AABDE00321FF3 /* AppDelegate.swift */; };
 		C3487E771E9AABDE00321FF3 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C3487E761E9AABDE00321FF3 /* Actions.sks */; };
 		C3487E791E9AABDE00321FF3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3487E781E9AABDE00321FF3 /* GameScene.swift */; };
@@ -22,6 +27,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C32C03E91EA2848900620A3F /* scorecard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scorecard.png; sourceTree = "<group>"; };
+		C32C03EA1EA2848900620A3F /* gameOver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameOver.png; sourceTree = "<group>"; };
+		C32C03EB1EA2848900620A3F /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		C32C03EF1EA289EE00620A3F /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		C32C03F01EA289EE00620A3F /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok.png; sourceTree = "<group>"; };
 		C3487E6F1E9AABDD00321FF3 /* FlappyBirdKnockoff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappyBirdKnockoff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3487E721E9AABDE00321FF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3487E761E9AABDE00321FF3 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -68,6 +78,11 @@
 		C3487E711E9AABDD00321FF3 /* FlappyBirdKnockoff */ = {
 			isa = PBXGroup;
 			children = (
+				C32C03EF1EA289EE00620A3F /* share.png */,
+				C32C03F01EA289EE00620A3F /* ok.png */,
+				C32C03E91EA2848900620A3F /* scorecard.png */,
+				C32C03EA1EA2848900620A3F /* gameOver.png */,
+				C32C03EB1EA2848900620A3F /* button.png */,
 				C3487E721E9AABDE00321FF3 /* AppDelegate.swift */,
 				C3487E8A1E9AB0AD00321FF3 /* background.png */,
 				C3487E8B1E9AB0AD00321FF3 /* bottomPipe.png */,
@@ -117,6 +132,7 @@
 				TargetAttributes = {
 					C3487E6E1E9AABDD00321FF3 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = FPJ6GKCDJ3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -144,15 +160,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C32C03EC1EA2848900620A3F /* scorecard.png in Resources */,
+				C32C03EE1EA2848900620A3F /* button.png in Resources */,
 				C3487E7E1E9AABDE00321FF3 /* Main.storyboard in Resources */,
 				C3487E8E1E9AB0AD00321FF3 /* background.png in Resources */,
 				C3487E8F1E9AB0AD00321FF3 /* bottomPipe.png in Resources */,
 				C3487E911E9AB0AD00321FF3 /* topPipe.png in Resources */,
 				C3487E801E9AABDE00321FF3 /* Assets.xcassets in Resources */,
+				C32C03F21EA289EE00620A3F /* ok.png in Resources */,
 				C3487E831E9AABDE00321FF3 /* LaunchScreen.storyboard in Resources */,
 				C3487E901E9AB0AD00321FF3 /* floor.png in Resources */,
 				C3487E931E9AB48400321FF3 /* player.atlas in Resources */,
 				C3487E771E9AABDE00321FF3 /* Actions.sks in Resources */,
+				C32C03ED1EA2848900620A3F /* gameOver.png in Resources */,
+				C32C03F11EA289EE00620A3F /* share.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +307,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FPJ6GKCDJ3;
 				INFOPLIST_FILE = FlappyBirdKnockoff/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shanlin.FlappyBirdKnockoff;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -298,7 +321,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FPJ6GKCDJ3;
 				INFOPLIST_FILE = FlappyBirdKnockoff/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shanlin.FlappyBirdKnockoff;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -325,6 +350,7 @@
 				C3487E891E9AABDE00321FF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

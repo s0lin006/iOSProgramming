@@ -234,11 +234,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="actualGrade1" destination="Zqd-6c-wV1" id="NuL-Uu-jyK"/>
-                        <outlet property="actualGrade2" destination="5Ix-a8-hqB" id="I59-wQ-6QZ"/>
-                        <outlet property="actualGrade3" destination="grN-Fi-cVL" id="nVj-Jc-hwB"/>
-                        <outlet property="actualGrade4" destination="09L-hI-ej4" id="kAE-jY-UtP"/>
-                        <outlet property="actualGrade5" destination="iLI-cC-fWg" id="JmL-Hf-aef"/>
                         <outlet property="calculateButton" destination="rPM-Lk-4f7" id="dgH-vJ-c7l"/>
                         <outlet property="className" destination="j4t-Qk-Iz7" id="ypT-Re-wzg"/>
                         <outlet property="finalGradeLabel" destination="1ko-yg-Hza" id="ciY-Vb-3Xp"/>
@@ -252,6 +247,11 @@
                         <outlet property="gradeWorth3" destination="EGV-hW-BDd" id="tUb-n1-N8m"/>
                         <outlet property="gradeWorth4" destination="3Nw-EE-bPs" id="4PB-t0-xJu"/>
                         <outlet property="gradeWorth5" destination="RYQ-Kh-EQb" id="GDh-5N-4v8"/>
+                        <outletCollection property="actualGrade" destination="Zqd-6c-wV1" collectionClass="NSMutableArray" id="W0d-Jh-3Yo"/>
+                        <outletCollection property="actualGrade" destination="5Ix-a8-hqB" collectionClass="NSMutableArray" id="u5z-jJ-26p"/>
+                        <outletCollection property="actualGrade" destination="grN-Fi-cVL" collectionClass="NSMutableArray" id="nx2-QO-jP5"/>
+                        <outletCollection property="actualGrade" destination="09L-hI-ej4" collectionClass="NSMutableArray" id="36Q-Xz-qsh"/>
+                        <outletCollection property="actualGrade" destination="iLI-cC-fWg" collectionClass="NSMutableArray" id="Hbd-MG-5Wl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
