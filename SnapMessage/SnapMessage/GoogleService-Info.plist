@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>437778449618-dsgc6u0496pskqlleh6l93us9t8q16rr.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.437778449618-dsgc6u0496pskqlleh6l93us9t8q16rr</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA32eHLUn072O9TcJKYRPipaSJh1_xoxVE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>437778449618</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.shanlin.SnapMessage</string>
+	<key>PROJECT_ID</key>
+	<string>snapmessage-db1ed</string>
+	<key>STORAGE_BUCKET</key>
+	<string>snapmessage-db1ed.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:437778449618:ios:e45e2d380c5a20e2</string>
+	<key>DATABASE_URL</key>
+	<string>https://snapmessage-db1ed.firebaseio.com</string>
+</dict>
+</plist>
