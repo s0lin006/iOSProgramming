@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  SnapMessage
 //
-//  Created by Shan Lin on 4/16/17.
+//  Created by Shan Lin on 4/18/17.
 //  Copyright © 2017 Shan Lin. All rights reserved.
 //
 
@@ -16,8 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
         FIRApp.configure()
+
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+
+        window?.rootViewController = UINavigationController(rootViewController: ViewController())
+
         return true
     }
 

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C35C7BC11EA3CEB6007CE50F"
+               BlueprintIdentifier = "C330756E1EA6A8F1008C1EE1"
                BuildableName = "SnapMessage.app"
                BlueprintName = "SnapMessage"
                ReferencedContainer = "container:SnapMessage.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C35C7BC11EA3CEB6007CE50F"
+            BlueprintIdentifier = "C330756E1EA6A8F1008C1EE1"
             BuildableName = "SnapMessage.app"
             BlueprintName = "SnapMessage"
             ReferencedContainer = "container:SnapMessage.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C35C7BC11EA3CEB6007CE50F"
+            BlueprintIdentifier = "C330756E1EA6A8F1008C1EE1"
             BuildableName = "SnapMessage.app"
             BlueprintName = "SnapMessage"
             ReferencedContainer = "container:SnapMessage.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C35C7BC11EA3CEB6007CE50F"
+            BlueprintIdentifier = "C330756E1EA6A8F1008C1EE1"
             BuildableName = "SnapMessage.app"
             BlueprintName = "SnapMessage"
             ReferencedContainer = "container:SnapMessage.xcodeproj">

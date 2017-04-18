@@ -6,9 +6,8 @@ target 'SnapMessage' do
   use_frameworks!
 
   # Pods for SnapMessage
-  pod 'Firebase/Core'
   pod 'Firebase/Database'
-  pod 'Firebase/Storage'
   pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
 
 end
