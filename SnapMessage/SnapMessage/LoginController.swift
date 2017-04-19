@@ -63,48 +63,11 @@ class LoginController: UIViewController
         FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
             if error != nil
             {
-                print(error)
+                print(error!)
                 return
             }
             self.dismiss(animated: true, completion: nil)
         })
-    }
-
-    func handleRegister()
-    {
-        guard let email = emailTextField.text, let password = passwordTextField.text, let name = nameTextField.text else
-        {
-            print("form is not valid")
-            return
-        }
-
-        FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user: FIRUser?, error) in
-            if error != nil
-            {
-                print(error!)
-                return
-            }
-
-            // user auth success
-            guard let uid = user?.uid else
-            {
-                return
-            }
-            let ref = FIRDatabase.database().reference(fromURL: "https://snapmessage-db1ed.firebaseio.com/")
-            let usersReference = ref.child("users").child(uid)
-
-            let values = ["name" : name, "email" : email]
-            usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in
-                if err != nil
-                {
-                    print(err!)
-                    return
-                }
-                print("user save to db success")
-                self.dismiss(animated: true, completion: nil)
-            })
-        })
-        print("Register")
     }
 
     // Name
@@ -157,15 +120,19 @@ class LoginController: UIViewController
             return tf
     }()
 
-    let profileImageView: UIImageView =
+    lazy var profileImageView: UIImageView =
     {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "sm")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
 
+        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleSelectProfileImageView)))
+        imageView.isUserInteractionEnabled = true
+
         return imageView
     }()
+
 
     lazy var loginRegisterSegmentedControl: UISegmentedControl =
     {
