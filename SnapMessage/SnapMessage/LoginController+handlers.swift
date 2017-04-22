@@ -36,7 +36,11 @@ extension LoginController: UIImagePickerControllerDelegate, UINavigationControll
             let imageName = NSUUID().uuidString
             let storageRef = FIRStorage.storage().reference().child("profile_images").child("\(imageName).png")
 
-            if let uploadData = UIImagePNGRepresentation(self.profileImageView.image!)
+
+            //if let uploadData = UIImagePNGRepresentation(self.profileImageView.image!)
+
+            //if let uploadData = UIImageJPEGRepresentation(self.profileImageView.image!, 0.1)
+            if let profileImage = self.profileImageView.image, let uploadData = UIImageJPEGRepresentation(profileImage, 0.1)
             {
                 storageRef.put(uploadData, metadata: nil, completion: { (metadata, error) in
                     if error != nil
@@ -58,7 +62,7 @@ extension LoginController: UIImagePickerControllerDelegate, UINavigationControll
 
     private func registerUserIntoDatabaseWithUID(uid: String, values: [String: Any])
     {
-        let ref = FIRDatabase.database().reference(fromURL: "https://snapmessage-db1ed.firebaseio.com/")
+        let ref = FIRDatabase.database().reference()
         let usersReference = ref.child("users").child(uid)
 
         usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in
@@ -67,6 +71,15 @@ extension LoginController: UIImagePickerControllerDelegate, UINavigationControll
                 print(err!)
                 return
             }
+
+            //self.messagesController?.fetchUserAndSetupNavBarTitle()
+            //self.messagesController?.navigationItem.title = values["name"] as? String
+
+            let user = User()
+            //setter will crash if keys dont match
+            user.setValuesForKeys(values)
+            self.messagesController?.setupNavBarWithUser(user: user)
+
             self.dismiss(animated: true, completion: nil)
         })
     }

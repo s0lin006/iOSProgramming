@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		83EF702DAC34875B7ACAB1E3 /* Pods_SnapMessage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E81A952F76D38862DB28A6BF /* Pods_SnapMessage.framework */; };
+		C305E4491EA94ABC00571329 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C305E4481EA94ABC00571329 /* ChatLogController.swift */; };
+		C305E44B1EAA841200571329 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C305E44A1EAA841200571329 /* Message.swift */; };
+		C305E44E1EAA8D6700571329 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C305E44D1EAA8D6700571329 /* UserCell.swift */; };
+		C305E4501EAAAB8400571329 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C305E44F1EAAAB8400571329 /* ChatMessageCell.swift */; };
 		C33075731EA6A8F1008C1EE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33075721EA6A8F1008C1EE1 /* AppDelegate.swift */; };
 		C33075751EA6A8F1008C1EE1 /* MessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33075741EA6A8F1008C1EE1 /* MessagesController.swift */; };
 		C33075781EA6A8F1008C1EE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C33075761EA6A8F1008C1EE1 /* Main.storyboard */; };
@@ -22,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C305E4481EA94ABC00571329 /* ChatLogController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
+		C305E44A1EAA841200571329 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		C305E44D1EAA8D6700571329 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		C305E44F1EAAAB8400571329 /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		C330756F1EA6A8F1008C1EE1 /* SnapMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33075721EA6A8F1008C1EE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C33075741EA6A8F1008C1EE1 /* MessagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesController.swift; sourceTree = "<group>"; };
@@ -69,6 +77,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C305E44C1EAA8D5200571329 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C305E44D1EAA8D6700571329 /* UserCell.swift */,
+				C305E44F1EAAAB8400571329 /* ChatMessageCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		C33075661EA6A8F1008C1EE1 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +107,7 @@
 		C33075711EA6A8F1008C1EE1 /* SnapMessage */ = {
 			isa = PBXGroup;
 			children = (
+				C305E44C1EAA8D5200571329 /* View */,
 				C34310E51EA8202A00937CA1 /* Helpers */,
 				C34310E01EA7C1A600937CA1 /* Model */,
 				C33075841EA6AB8D008C1EE1 /* Controller */,
@@ -110,6 +128,7 @@
 				C33075741EA6A8F1008C1EE1 /* MessagesController.swift */,
 				C34310DE1EA7BA0500937CA1 /* NewMessageController.swift */,
 				C34310E31EA7C8F000937CA1 /* LoginController+handlers.swift */,
+				C305E4481EA94ABC00571329 /* ChatLogController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -118,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				C34310E11EA7C21F00937CA1 /* User.swift */,
+				C305E44A1EAA841200571329 /* Message.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -254,12 +274,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C305E4491EA94ABC00571329 /* ChatLogController.swift in Sources */,
 				C34310DF1EA7BA0500937CA1 /* NewMessageController.swift in Sources */,
 				C33075751EA6A8F1008C1EE1 /* MessagesController.swift in Sources */,
+				C305E44B1EAA841200571329 /* Message.swift in Sources */,
 				C34310E41EA7C8F000937CA1 /* LoginController+handlers.swift in Sources */,
 				C33075861EA6ABB5008C1EE1 /* LoginController.swift in Sources */,
 				C34310E21EA7C21F00937CA1 /* User.swift in Sources */,
+				C305E4501EAAAB8400571329 /* ChatMessageCell.swift in Sources */,
 				C33075731EA6A8F1008C1EE1 /* AppDelegate.swift in Sources */,
+				C305E44E1EAA8D6700571329 /* UserCell.swift in Sources */,
 				C34310E71EA8204400937CA1 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
