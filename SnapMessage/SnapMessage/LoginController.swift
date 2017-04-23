@@ -59,6 +59,11 @@ class LoginController: UIViewController
         guard let email = emailTextField.text, let password = passwordTextField.text else
         {
             print("form is not valid")
+
+            let alertController = UIAlertController(title: "Invalid Input", message: "Invalid Format Email or Password. Please Try Again", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+
             return
         }
 
@@ -66,6 +71,11 @@ class LoginController: UIViewController
             if error != nil
             {
                 print(error!)
+
+                let alertController = UIAlertController(title: "Incorrect Credentials", message: "Incorrect Email or Password. Please Try Again", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+
                 return
             }
 
