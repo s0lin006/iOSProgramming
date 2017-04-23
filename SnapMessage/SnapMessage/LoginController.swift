@@ -141,9 +141,9 @@ class LoginController: UIViewController
     lazy var loginRegisterSegmentedControl: UISegmentedControl =
     {
         let sc = UISegmentedControl(items: ["Login", "Register"])
+        sc.selectedSegmentIndex = 1
         sc.translatesAutoresizingMaskIntoConstraints = false
         sc.tintColor = UIColor.white
-        sc.selectedSegmentIndex = 1
         sc.addTarget(self, action: #selector(handleLoginRegisterChange), for: .valueChanged)
 
         return sc
@@ -214,6 +214,13 @@ class LoginController: UIViewController
         setUpLoginRegisterSegmentedControl()
 
 
+        // TODO: temp hack for dismissing keyboard - for demo purpose
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+
+
+
     }
 
     func setUpLoginRegisterSegmentedControl()
@@ -255,6 +262,8 @@ class LoginController: UIViewController
         inputsContainerView.addSubview(emailSeparatorView)
         inputsContainerView.addSubview(passwordTextField)
 
+
+
         // ------------- Name ---------------------------
         // need x, y, width, height constraint
         nameTextField.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor, constant: 12).isActive = true
@@ -263,6 +272,7 @@ class LoginController: UIViewController
 
         nameTextFieldHeightAnchor = nameTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/3)
         nameTextFieldHeightAnchor?.isActive = true
+
 
         // need x, y, width, height constraint
         nameSeparatorView.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor).isActive = true
@@ -294,6 +304,7 @@ class LoginController: UIViewController
         passwordTextFieldHeightAnchor = passwordTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/3)
         passwordTextFieldHeightAnchor?.isActive = true
 
+
     }
 
     func setupLoginRegisterButton()
@@ -309,6 +320,7 @@ class LoginController: UIViewController
     {
         return .lightContent
     }
+
 
 }
 

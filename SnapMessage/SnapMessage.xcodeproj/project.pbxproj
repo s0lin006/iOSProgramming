@@ -22,6 +22,7 @@
 		C34310E21EA7C21F00937CA1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34310E11EA7C21F00937CA1 /* User.swift */; };
 		C34310E41EA7C8F000937CA1 /* LoginController+handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34310E31EA7C8F000937CA1 /* LoginController+handlers.swift */; };
 		C34310E71EA8204400937CA1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34310E61EA8204400937CA1 /* Extensions.swift */; };
+		C36CE44C1EAD0CA10027785C /* ChatInputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36CE44B1EAD0CA10027785C /* ChatInputContainerView.swift */; };
 		C38146421EABCACB00E3C83D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C38146411EABCACB00E3C83D /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,8 @@
 		C34310E11EA7C21F00937CA1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C34310E31EA7C8F000937CA1 /* LoginController+handlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginController+handlers.swift"; sourceTree = "<group>"; };
 		C34310E61EA8204400937CA1 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C36CE44B1EAD0CA10027785C /* ChatInputContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatInputContainerView.swift; sourceTree = "<group>"; };
+		C36CE44D1EAD18B10027785C /* SnapMessage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SnapMessage.entitlements; sourceTree = "<group>"; };
 		C38146411EABCACB00E3C83D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D949DF1E5F75A7C143AA0F10 /* Pods-SnapMessage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMessage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMessage/Pods-SnapMessage.debug.xcconfig"; sourceTree = "<group>"; };
 		E81A952F76D38862DB28A6BF /* Pods_SnapMessage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMessage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +85,7 @@
 			children = (
 				C305E44D1EAA8D6700571329 /* UserCell.swift */,
 				C305E44F1EAAAB8400571329 /* ChatMessageCell.swift */,
+				C36CE44B1EAD0CA10027785C /* ChatInputContainerView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -107,6 +111,7 @@
 		C33075711EA6A8F1008C1EE1 /* SnapMessage */ = {
 			isa = PBXGroup;
 			children = (
+				C36CE44D1EAD18B10027785C /* SnapMessage.entitlements */,
 				C305E44C1EAA8D5200571329 /* View */,
 				C34310E51EA8202A00937CA1 /* Helpers */,
 				C34310E01EA7C1A600937CA1 /* Model */,
@@ -185,7 +190,13 @@
 				TargetAttributes = {
 					C330756E1EA6A8F1008C1EE1 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = FPJ6GKCDJ3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -275,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C305E4491EA94ABC00571329 /* ChatLogController.swift in Sources */,
+				C36CE44C1EAD0CA10027785C /* ChatInputContainerView.swift in Sources */,
 				C34310DF1EA7BA0500937CA1 /* NewMessageController.swift in Sources */,
 				C33075751EA6A8F1008C1EE1 /* MessagesController.swift in Sources */,
 				C305E44B1EAA841200571329 /* Message.swift in Sources */,
@@ -408,11 +420,15 @@
 			baseConfigurationReference = D949DF1E5F75A7C143AA0F10 /* Pods-SnapMessage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SnapMessage/SnapMessage.entitlements;
+				DEVELOPMENT_TEAM = FPJ6GKCDJ3;
 				INFOPLIST_FILE = SnapMessage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shanlin.SnapMessage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -421,11 +437,15 @@
 			baseConfigurationReference = EBA7DD87460F6AB6AE0481CF /* Pods-SnapMessage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SnapMessage/SnapMessage.entitlements;
+				DEVELOPMENT_TEAM = FPJ6GKCDJ3;
 				INFOPLIST_FILE = SnapMessage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shanlin.SnapMessage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

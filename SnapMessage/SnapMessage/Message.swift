@@ -23,6 +23,8 @@ class Message: NSObject
 
     var videoUrl: String?
 
+    var willExpire: Bool?
+
     func chatPartnerId() -> String?
     {
         if fromId == FIRAuth.auth()?.currentUser?.uid
@@ -49,6 +51,8 @@ class Message: NSObject
         imageHeight = dictionary["imageHeight"] as? NSNumber
 
         videoUrl = dictionary["videoUrl"] as? String
+
+        willExpire = dictionary["willExpire"] as? Bool
     }
 
 
