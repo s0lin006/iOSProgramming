@@ -76,7 +76,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         setupLabel()
 
         flapPlayer()
-        flapPlayer()
+        //flapPlayer()
     }
 
     // MARK: Setup methods
@@ -344,17 +344,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         let okButton = SKSpriteNode(imageNamed: "Button")
         okButton.position = CGPoint(x: size.width * 0.25, y: size.height/2 - scorecard.size.height/2 - margin - okButton.size.height/2)
         okButton.zPosition = Layer.UI.rawValue
-        worldNode.addChild(okButton)
+        //worldNode.addChild(okButton)
 
         let ok = SKSpriteNode(imageNamed: "ok")
-        ok.position = CGPoint.zero
+        ok.position = CGPoint(x: size.width * 0.25, y: size.height/2 - scorecard.size.height/2 - margin - okButton.size.height/2)
         ok.zPosition = Layer.UI.rawValue
-        okButton.addChild(ok)
+        worldNode.addChild(ok)
 
         let shareButton = SKSpriteNode(imageNamed: "Button")
         shareButton.position = CGPoint(x: size.width * 0.75, y: size.height/2 - scorecard.size.height/2 - margin - shareButton.size.height/2)
         shareButton.zPosition = Layer.UI.rawValue
-        worldNode.addChild(shareButton)
+        //worldNode.addChild(shareButton)
 
         let share = SKSpriteNode(imageNamed: "share")
         share.position = CGPoint.zero
@@ -448,6 +448,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         let newScene = GameScene(size: size)
         let transition = SKTransition.fade(with: SKColor.black, duration: 0.5)
         view?.presentScene(newScene, transition: transition)
+        gameState = .Play
     }
 
     func switchToGameOver()
